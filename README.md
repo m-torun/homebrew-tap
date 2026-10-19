@@ -1,0 +1,38 @@
+# m-torun/tap
+
+Homebrew tap for my macOS apps and tools.
+
+No `brew tap` step needed — naming the tap in the install command adds it
+automatically.
+
+## Apps
+
+```sh
+brew install --cask m-torun/tap/brightsync
+```
+
+| | |
+|---|---|
+| [brightsync](https://github.com/m-torun/brightsync) | Mirrors one display's brightness, and optionally its color preset, onto your other monitors over DDC/CI. Apple Silicon, macOS 13+. |
+
+## Updating and removing
+
+```sh
+brew upgrade --cask m-torun/tap/brightsync
+brew uninstall --cask m-torun/tap/brightsync          # removes the app
+brew uninstall --zap --cask m-torun/tap/brightsync    # also removes its settings and log
+```
+
+## First launch
+
+These apps are signed ad-hoc, not with a paid Apple Developer ID, so macOS
+blocks the first launch with "the developer cannot be verified". Open the app
+once, then allow it under **System Settings → Privacy & Security → Open
+Anyway**. Each cask repeats this in its own caveats, and it is a one-time step
+per version.
+
+Properly signing and notarizing the apps would remove that step; it needs a
+paid Apple Developer account, which these do not have.
+
+Every cask here points at a release artifact built from the public source in
+the matching repository, pinned by SHA256.
