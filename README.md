@@ -6,7 +6,9 @@ Homebrew tap for my macOS apps and tools.
 
 ```sh
 brew tap m-torun/tap
+
 brew install --cask brightsync
+brew install --cask tab-tidy
 ```
 
 Homebrew 7 no longer adds a third-party tap implicitly, so the `brew tap` line
@@ -15,13 +17,14 @@ is needed once; after that, installing anything from here is a single command.
 | | |
 |---|---|
 | [brightsync](https://github.com/m-torun/brightsync) | Mirrors one display's brightness, and optionally its color preset, onto your other monitors over DDC/CI. Apple Silicon, macOS 13+. |
+| [tab-tidy](https://github.com/m-torun/tab-tidy) | Asks Claude which Chrome tabs to close, shows you the plan, and closes the ones you approve. Needs Claude Code. Apple Silicon, macOS 13+. |
 
 ## Updating and removing
 
 ```sh
 brew upgrade --cask brightsync
 brew uninstall --cask brightsync          # removes the app
-brew uninstall --zap --cask brightsync    # also removes its settings and log
+brew uninstall --zap --cask brightsync    # also removes its settings and data
 ```
 
 ## First launch
