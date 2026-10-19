@@ -2,14 +2,15 @@
 
 Homebrew tap for my macOS apps and tools.
 
-No `brew tap` step needed — naming the tap in the install command adds it
-automatically.
-
 ## Apps
 
 ```sh
-brew install --cask m-torun/tap/brightsync
+brew tap m-torun/tap
+brew install --cask brightsync
 ```
+
+Homebrew 7 no longer adds a third-party tap implicitly, so the `brew tap` line
+is needed once; after that, installing anything from here is a single command.
 
 | | |
 |---|---|
@@ -18,9 +19,9 @@ brew install --cask m-torun/tap/brightsync
 ## Updating and removing
 
 ```sh
-brew upgrade --cask m-torun/tap/brightsync
-brew uninstall --cask m-torun/tap/brightsync          # removes the app
-brew uninstall --zap --cask m-torun/tap/brightsync    # also removes its settings and log
+brew upgrade --cask brightsync
+brew uninstall --cask brightsync          # removes the app
+brew uninstall --zap --cask brightsync    # also removes its settings and log
 ```
 
 ## First launch
